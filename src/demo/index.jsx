@@ -56,7 +56,7 @@ class Demo extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    alert(this.state.otp);
+    alert(this.state.otp + "Xin chao");
   };
 
   render() {
@@ -207,6 +207,7 @@ class Demo extends Component {
                   isInputSecure={isInputSecure}
                   shouldAutoFocus
                   value={otp}
+                  onKeyDown = {(e) => console.log("On keydown: ", e.keyCode)}
                   placeholder={placeholder}
                 />
               </div>
